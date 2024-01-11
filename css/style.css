@@ -19,7 +19,54 @@ body{
    font-family: Arial, Verdana, sans-serif;
 }
 .game{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
    padding: 40px 15px;
    max-width: 1000px;
    margin: 0 auto;
+}
+.card{
+   display: flex;
+  padding: 30px;
+  background-color: rgb(236, 199, 53);
+  height: 240px;
+  font-size: 0px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+   color: rgb(183, 105, 9);
+  
+  border-radius: 40px;
+  box-shadow: 8px 8px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.card:hover{
+   background-color: rgb(232, 208, 112); 
+}
+.card:active{
+   background-color: rgb(222, 180, 10);
+}
+.open{
+   font-size: 100px;
+   color: blue;
+   cursor: default;
+}
+.open:hover{
+   background-color: rgb(236, 199, 53);
+}
+.open:active{
+   background-color: rgb(236, 199, 53); 
+}
+.success{
+   font-size: 100px;
+   color: rgb(17, 141, 56);
+   cursor: default;
+}
+.success:hover{
+   color: rgb(17, 141, 56);
+}
+.success:active{
+   color: rgb(17, 141, 56);
 }
