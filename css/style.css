@@ -50,7 +50,7 @@ body{
 }
 .open{
    font-size: 100px;
-   color: blue;
+   color: rgb(39, 45, 208);
    cursor: default;
 }
 .open:hover{
