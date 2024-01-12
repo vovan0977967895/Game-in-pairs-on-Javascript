@@ -1,7 +1,8 @@
-const game = document.getElementById('game')
+const game = document.getElementById('game');
 
 
-let cardCount = 8;
+
+function startGame(game, cardCount){
 const cardNumberArray = [];
 let firstCard = null;
 let secondCard = null;
@@ -21,6 +22,18 @@ for(let i = 0; i < cardNumberArray.length; i++){
     cardNumberArray[i] = cardNumberArray[ranomIndex];
     cardNumberArray[ranomIndex] = temp;
 }
+//Настройка сетки
+let colums = 2;
+if(cardCount === 3 || cardCount === 6 || cardCount === 9){
+    colums =3;
+}
+if(cardCount === 4 || cardCount === 8 || cardCount === 12){
+    colums =4;
+}
+if( cardCount === 10 || cardCount === 15){
+    colums = 5;
+}
+game.style = `grid-template-columns: repeat(${colums}, 1fr);`
 
 //Создание масива карточек
 
@@ -30,7 +43,7 @@ for(const cardNumber of cardNumberArray){
     card.textContent = cardNumber;
     card.classList.add('card')
 
-    // Клик по каточке
+    // Клик по карточке
     card.addEventListener('click', function(){
         if(card.classList.contains('open') || card.classList.contains('success')){
             return
@@ -64,7 +77,10 @@ for(const cardNumber of cardNumberArray){
        }
        if(cardNumberArray.length === document.querySelectorAll('.success').length){
         setTimeout(function() {
+            game.innerHTML = "";
             alert('Victory!!!')
+            let cardCount = Number(prompt('Новая игра! Введите кол-во пар.', 4));
+            startGame(game, cardCount);
         }, 400)
        }
        console.log('firstCard',firstCard);
@@ -74,5 +90,7 @@ for(const cardNumber of cardNumberArray){
 
    game.append(card);
 }
+}
+let cardCount = Number(prompt('Новая игра! Введите кол-во пар.', 4));
+startGame(game, cardCount);
 
-console.log(cardNumberArray);
