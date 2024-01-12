@@ -22,7 +22,7 @@ body{
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 20px;
-   padding: 40px 15px;
+   padding: 10px 10px;
    max-width: 1000px;
    margin: 0 auto;
 }
@@ -69,4 +69,49 @@ body{
 }
 .success:active{
    color: rgb(17, 141, 56);
+}
+@media (max-width: 768px){
+   .card{
+      height: 180px;
+      border-radius: 30px;
+      padding: 25px;
+
+   }
+   .open{
+      font-size: 60px;
+   }
+   .success{
+      font-size: 60px;
+   }
+}
+@media (max-width: 480px){
+   .card{
+      height: 100px;
+      border-radius: 20px;
+      padding: 20px;
+
+   }
+   .open{
+      font-size: 35px;
+   }
+   .success{
+      font-size: 35px;
+   }
+}
+@media (max-width: 480px){
+   .game{
+      gap: 10px;
+   }
+   .card{
+      height: 70px;
+      border-radius: 20px;
+      padding: 10px;
+
+   }
+   .open{
+      font-size: 25px;
+   }
+   .success{
+      font-size: 25px;
+   }
 }

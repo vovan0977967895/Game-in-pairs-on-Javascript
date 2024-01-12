@@ -1,7 +1,7 @@
 const game = document.getElementById('game')
 
 
-let cardCount = 4;
+let cardCount = 8;
 const cardNumberArray = [];
 let firstCard = null;
 let secondCard = null;
