@@ -79,7 +79,7 @@ for(const cardNumber of cardNumberArray){
         setTimeout(function() {
             game.innerHTML = "";
             alert('Victory!!!')
-            let cardCount = Number(prompt('Новая игра! Введите кол-во пар от 4 до 10.', 6));
+            let cardCount = Number(prompt('Новая игра! Введите кол-во пар от 4 до 12.', 6));
             startGame(game, cardCount);
         }, 400)
        }
@@ -91,6 +91,6 @@ for(const cardNumber of cardNumberArray){
    game.append(card);
 }
 }
-let cardCount = Number(prompt('Новая игра! Введите кол-во пар от 4 до 10.', 6));
+let cardCount = Number(prompt('Новая игра! Введите кол-во пар от 4 до 12.', 6));
 startGame(game, cardCount);
 
