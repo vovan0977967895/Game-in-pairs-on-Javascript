@@ -16,11 +16,19 @@ a{
    color: inherit;
 }
 body{
-   font-family: Arial, Verdana, sans-serif;
+   font-family: Arial, Verdana, sans-serif;   
 }
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+   justify-content: center;
+}
+
 .game{
    display: grid;
    grid-template-columns: repeat(4, 1fr);
+   place-self: center;
    gap: 20px;
    padding: 10px 10px;
    max-width: 1000px;
@@ -28,15 +36,14 @@ body{
 }
 .card{
    display: flex;
-  padding: 30px;
+  padding: 20px;
   background-color: rgb(236, 199, 53);
   height: 240px;
   font-size: 0px;
   font-weight: 700;
   align-items: center;
   justify-content: center;
-   color: rgb(183, 105, 9);
-  
+   color: rgb(183, 105, 9);  
   border-radius: 40px;
   box-shadow: 8px 8px 10px;
   cursor: pointer;
