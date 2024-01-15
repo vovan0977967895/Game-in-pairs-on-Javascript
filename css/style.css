@@ -25,6 +25,11 @@ body{
 	min-height: 100dvh;
    justify-content: center;
 }
+.game__title{
+   text-align: center;
+   font-size: 24px;
+   color: blueviolet;
+}
 
 .game{
    display: grid;
