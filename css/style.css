@@ -16,7 +16,8 @@ a{
    color: inherit;
 }
 body{
-   font-family: Arial, Verdana, sans-serif;   
+   font-family: Arial, Verdana, sans-serif;  
+   user-select: none; 
 }
 .wrapper {
 	display: flex;
