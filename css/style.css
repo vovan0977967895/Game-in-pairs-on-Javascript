@@ -51,7 +51,7 @@ body{
   justify-content: center;
    color: rgb(183, 105, 9);  
   border-radius: 40px;
-  box-shadow: 10px 10px 20px , inset -3px -3px 3px   ;
+  box-shadow: 8px 8px 15px, inset -2px -2px 3px    ;
   cursor: pointer;
   transition: background-color 0.3s;
 }
